@@ -1,7 +1,13 @@
-name: 'Hello World JS Action'
-description: 'Greet someone and record the time'
+name: 'gha-inputs-validation'
+description: 'Validate workflow inputs'
 inputs:
-  schema:
+  workflow_inputs:
+    description: 'The workflow inputs'
+    required: true
+    default: '{}'
+  cel_expressions:
+    description: 'The validation in CEL format'
+    required: true
 runs:
   using: 'node20'
   main: 'index.js'
