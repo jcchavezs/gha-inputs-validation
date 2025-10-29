@@ -17,5 +17,6 @@ jobs:
       - name: Test validation
         uses: ./
         with:
-          schema: email.contains("@")
-          inputs: '{"email": "josecarlos.chavez@owasp.org"}'
+          cel_expressions: |
+            email.contains("@")
+          workflow_inputs: '{"email": "josecarlos.chavez@owasp.org"}'

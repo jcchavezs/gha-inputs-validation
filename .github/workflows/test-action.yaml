@@ -15,4 +15,7 @@ jobs:
       - name: Run action
         uses: ./
         with:
-          inputs: ${{ inputs }}
+          workflow_inputs: ${{ inputs }}
+          cel_expressions: |
+            '1==1'
+            '2==2'
