@@ -17,4 +17,5 @@ jobs:
       - name: Test validation
         uses: ./
         with:
-          inputs: ${{ inputs }}
+          schema: email.contains("@")
+          inputs: '{"email": "josecarlos.chavez@owasp.org"}'
